@@ -1,8 +1,9 @@
 source find-ports.sh
 
-port_file="refactor-ports.txt"
+port_file="config/refactor-ports.txt"
+mkdir -p config
 
- if [ -f "$port_file" ]; then
+if [ -f "$port_file" ]; then
     echo "Reading $port_file; remove this file if you want to scan other ports"
 
     IFS=' ' read -r rest_port mcp_port react_port < $port_file
@@ -28,5 +29,24 @@ else
         echo "Failed to find available ports"
         exit 1
     fi
+fi
 
+application_properties="config/application.properties"
+
+if [ ! -f "$application_properties" ]; then 
+    echo "Writing $application_properties"
+    cat > $application_properties << EOF
+llm.docstringModelName=llama3.2:latest
+llm.docstringProvider=ollama
+llm.docstringBaseUrl=http://localhost:11434
+micronaut.server.port=${rest_port}
+EOF
+else
+    current_port=$(grep "^micronaut.server.port=" $application_properties | cut -d'=' -f2)
+    if [ "$current_port" != "$rest_port" ]; then
+        echo "Updating port number in $application_properties"
+        sed -i .backup "s/^micronaut.server.port=.*/micronaut.server.port=$rest_port/" $application_properties
+    else
+        echo "Not updating $application_properties"
+    fi
 fi
