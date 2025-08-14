@@ -31,7 +31,7 @@ find_ports() {
     INCREMENT=10
 
     # Get base port from user input
-    if [ $# -eq 0 ]; then
+    if [ $# -eq 0 ] || [ "$1" == "" ]; then
         echo "Find three consecutive available ports for:" >&2
         echo "  - REST server (port N)" >&2
         echo "  - MCP server (port N+1)" >&2
