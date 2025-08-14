@@ -1,70 +1,38 @@
-#!/bin/bash
-# install.sh - Minimal installation script
+source find-ports.sh
 
-set -e
+port_file="refactor-ports.txt"
 
-# Configuration - Update these for your project
-GITHUB_REPO="yourusername/yourproject"
-DOCKER_IMAGE="ghcr.io/$GITHUB_REPO"
-APP_PORT="8080"
-DOCKER_PORT="5432"
+ if [ -f "$port_file" ]; then
+    echo "Reading $port_file; remove this file if you want to scan other ports"
 
-echo "Installing $GITHUB_REPO..."
+    while IFS='\n' read -r rest_port mcp_port react_port; do
+        echo r=$rest_port m=$mcp_port r2=$react_port
+    done < $port_file
 
-# Check dependencies
-command -v java >/dev/null 2>&1 || { echo "Java is required"; exit 1; }
-command -v docker >/dev/null 2>&1 || { echo "Docker is required"; exit 1; }
-
-# Get latest release info
-echo "Fetching latest release..."
-RELEASE_INFO=$(curl -s "https://api.github.com/repos/$GITHUB_REPO/releases/latest")
-VERSION=$(echo "$RELEASE_INFO" | grep '"tag_name"' | cut -d'"' -f4)
-
-if [ -z "$VERSION" ]; then
-    echo "Failed to get latest version"
-    exit 1
-fi
-
-echo "Latest version: $VERSION"
-
-# Download JAR
-echo "Downloading JAR..."
-JAR_URL=$(echo "$RELEASE_INFO" | grep '"browser_download_url".*\.jar"' | cut -d'"' -f4)
-
-if [ -z "$JAR_URL" ]; then
-    echo "JAR download URL not found"
-    exit 1
-fi
-
-curl -L -o "app.jar" "$JAR_URL"
-
-# Pull Docker image
-echo "Pulling Docker image..."
-docker pull "$DOCKER_IMAGE:latest"
-
-# Create configuration
-cat > config.env << EOF
-APP_PORT=$APP_PORT
-DOCKER_PORT=$DOCKER_PORT
-DOCKER_IMAGE=$DOCKER_IMAGE:latest
+    # Validate all three ports are numbers
+    if [[ "$rest_port" =~ ^[0-9]+$ ]] && [[ "$mcp_port" =~ ^[0-9]+$ ]] && [[ "$react_port" =~ ^[0-9]+$ ]]; then
+        echo "REST port :  $rest_port"
+        echo "MCP port  :  $mcp_port"
+        echo "React port:  $react_port"
+    else 
+        echo "Not all lines in $port_file represent port numbers."
+        exit 1
+    fi
+    
+else 
+    # Use the function and capture the base port
+    if base_port=$(find_ports "$1"); then
+        rest_port=$base_port
+        mcp_port=$((base_port + 1))
+        react_port=$((base_port + 2))
+        cat > "$port_file" << EOF
+$rest_port
+$mcp_port
+$react_port
 EOF
+    else
+        echo "Failed to find available ports"
+        exit 1
+    fi
 
-# Create run script
-cat > run.sh << 'EOF'
-#!/bin/bash
-source config.env
-
-echo "Starting Docker container..."
-docker run -d --name myapp-container -p "$DOCKER_PORT:$DOCKER_PORT" "$DOCKER_IMAGE"
-
-echo "Waiting for container to be ready..."
-sleep 5
-
-echo "Starting JAR application..."
-java -Dserver.port="$APP_PORT" -jar app.jar
-EOF
-
-chmod +x run.sh
-
-echo "Installation complete!"
-echo "Run: ./run.sh"
+fi
