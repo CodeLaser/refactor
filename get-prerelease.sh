@@ -18,10 +18,11 @@ get_prerelease() {
 
     # Get all releases
     RELEASES_INFO=$(curl -s "https://api.github.com/repos/$GITHUB_REPO/releases")
-
+    echo "step 1" >&2
+    echo "$RELEASES_INFO" > releases.json
     # Find the latest pre-release (not draft) - releases are already sorted by date
-    PRERELEASE=$(echo "$RELEASES_INFO" | jq -r '.[] | select(.prerelease == true and .draft == false) | {tag_name: .tag_name, assets: .assets} | @base64' | head -1)
-
+    PRERELEASE=$(echo "$RELEASES_INFO"| tr '\000-\037' ' ' | jq -r '.[] | select(.prerelease == true and .draft == false) | {tag_name: .tag_name, assets: .assets} | @base64' | head -1)
+    echo "step 2" >&2
     if [ -z "$PRERELEASE" ] || [ "$PRERELEASE" = "null" ]; then
         echo "No pre-releases found. Getting latest stable release..." >&2
         RELEASE_INFO=$(curl -s "https://api.github.com/repos/$GITHUB_REPO/releases/latest")
