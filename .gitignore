@@ -6,3 +6,4 @@ config/
 **/.DS_Store
 start.sh
 **/*.backup
+settings.local.json
