@@ -73,18 +73,20 @@ docker_env_file="config/docker.env"
 echo "Writing Docker environment configuration to $docker_env_file"
 cat > $docker_env_file << EOF
 # Docker environment configuration for refactor-mcp
+# Container binding (internal ports - let container use defaults)
+MCP_HOST=0.0.0.0
+MCP_PORT=8080
+UI_HOST=0.0.0.0
+UI_PORT=8081
+CONFIGURE_MCP_PORT=8082
+MCP_PATH=/mcp
 # External service URLs (container to host communication)
 REFACTOR_REST_URL=http://host.docker.internal:${java_rest_port}
 SWAGGER_URL=http://host.docker.internal:${java_rest_port}
-# External ports for URL generation (passed to container for AI client URLs)
-UI_HOST=localhost
-UI_PORT=${ui_port}
-MCP_HOST=localhost
-MCP_PORT=${mcp_port}
-CONFIGURE_MCP_HOST=localhost
-CONFIGURE_MCP_PORT=${configure_port}
-# Container binding (let container use its defaults)
-MCP_PATH=/mcp
+# External URLs for AI client access (if container supports these)
+EXTERNAL_MCP_URL=http://localhost:${mcp_port}
+EXTERNAL_UI_URL=http://localhost:${ui_port}
+EXTERNAL_CONFIGURE_URL=http://localhost:${configure_port}
 EOF
 
 ##### write or update start scripts #####
