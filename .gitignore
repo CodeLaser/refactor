@@ -7,7 +7,5 @@ config/
 start.sh
 **/*.backup
 settings.local.json
-start-all.sh
-start-docker.sh
-start-java.sh
-stop-all.sh
+start*.sh
+stop*.sh

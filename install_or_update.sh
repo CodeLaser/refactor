@@ -66,6 +66,14 @@ source get-prerelease.sh
 version=$(get_prerelease)
 #debug echo "Latest version: '$version'"
 
+##### ensure other directories 
+
+echo "Ensuring directories "
+echo "  ./projects    here you link in your Java project"
+echo "  ./work        managed by the Java server"
+echo "  ./logs        log of the Java server and license manager"
+mkdir -p projects work logs
+
 ##### write or update Docker environment configuration #####
 
 docker_env_file="config/docker.env"
@@ -104,7 +112,7 @@ EOF
 chmod +x $java_start_file
 
 # Docker start script
-docker_start_file="start-docker.sh"
+docker_start_file="start-mcp.sh"
 
 echo "Writing Docker start script: $docker_start_file"
 cat > $docker_start_file << EOF
@@ -163,82 +171,29 @@ combined_start_file="start-all.sh"
 echo "Writing combined start script: $combined_start_file"
 cat > $combined_start_file << EOF
 #!/bin/bash
-echo "Starting complete refactor system (Java + Docker)..."
-
-# Start Java server in background
-echo "Starting Java REST server..."
-./$java_start_file &
-JAVA_PID=\$!
-echo "Java server PID: \$JAVA_PID"
-
-# Wait a moment for Java server to start
-sleep 5
-
-# Check if Java server is running
-if ! ps -p \$JAVA_PID > /dev/null; then
-    echo "❌ Java server failed to start"
-    exit 1
-fi
+echo "Starting complete refactor system (Docker + Java)..."
 
 # Start Docker container
-echo "Starting Docker container..."
+echo "Starting Docker container with refactor MCP server and React UI..."
 ./$docker_start_file
 
-echo ""
-echo "🚀 System started successfully!"
-echo "📊 Java REST API: http://localhost:$java_rest_port"
-echo "🌐 React UI: http://localhost:$ui_port"
-echo "🔧 MCP server: http://localhost:$mcp_port/mcp"
-echo "⚙️  Configure server: http://localhost:$configure_port/mcp-configure"
-echo ""
-echo "To stop:"
-echo "  Java server: kill \$JAVA_PID"
-echo "  Docker: docker stop refactor-mcp"
-echo "  Both: ./stop-all.sh"
-
-# Save Java PID for stopping later
-echo \$JAVA_PID > config/java.pid
+# Start Java server in foreground
+echo "Starting Java REST server..."
+./$java_start_file 
 EOF
 chmod +x $combined_start_file
 
 # Stop script
-stop_file="stop-all.sh"
+stop_file="stop-mcp.sh"
 
 echo "Writing stop script: $stop_file"
 cat > $stop_file << EOF
 #!/bin/bash
-echo "Stopping refactor system..."
+echo "Stopping refactor MCP server..."
 
 # Stop Docker container
 docker stop refactor-mcp 2>/dev/null && echo "✅ Docker container stopped" || echo "⚠️  Docker container not running"
 docker rm refactor-mcp 2>/dev/null || true
-
-# Stop Java server
-if [ -f config/java.pid ]; then
-    JAVA_PID=\$(cat config/java.pid)
-    if ps -p \$JAVA_PID > /dev/null 2>&1; then
-        kill \$JAVA_PID && echo "✅ Java server stopped (PID: \$JAVA_PID)"
-    else
-        echo "⚠️  Java server not running (PID: \$JAVA_PID)"
-    fi
-    rm -f config/java.pid
-else
-    echo "⚠️  No Java PID file found"
-fi
-
-echo "🛑 System stopped"
+echo "🛑 refactor MCP server stopped"
 EOF
 chmod +x $stop_file
-
-# Legacy start.sh for backward compatibility
-start_file="start.sh"
-echo "Writing legacy start.sh (points to combined start script)"
-cat > $start_file << EOF
-#!/bin/bash
-# Legacy start script - now launches both Java and Docker
-echo "Note: This script now starts both Java REST server and Docker container"
-echo "Use start-java.sh, start-docker.sh, or start-all.sh for specific components"
-echo ""
-exec ./start-all.sh
-EOF
-chmod +x $start_file
