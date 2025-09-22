@@ -40,5 +40,6 @@ Ports are auto-allocated starting from 12340.
 ## Requirements
 
 - `jq`
+-  mcp-proxy: 'https://github.com/sparfenyuk/mcp-proxy' 
 - `docker` (optional, for MCP server and UI)
 - Java 17+ (for REST server)
