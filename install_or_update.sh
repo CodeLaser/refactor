@@ -63,8 +63,13 @@ fi
 ##### get the latest release #####
 
 source get-prerelease.sh
-version=$(get_prerelease)
-#debug echo "Latest version: '$version'"
+version_output=$(get_prerelease | tail -n 1)
+jar_version=$(echo "$version_output" | cut -d' ' -f1)
+docker_version=$(echo "$version_output" | cut -d' ' -f2)
+
+# Use jar version as primary version for backward compatibility
+version="$jar_version"
+#debug echo "Latest JAR version: '$jar_version', Docker version: '$docker_version'"
 
 ##### ensure other directories 
 
@@ -101,7 +106,7 @@ EOF
 
 # Java server start script
 java_start_file="start-java.sh"
-jar_file="refactor-$version.jar"
+jar_file="refactor-$jar_version.jar"
 
 echo "Writing Java server start script: $java_start_file"
 cat > $java_start_file << EOF
@@ -122,15 +127,13 @@ echo "Starting Docker container with MCP server and React UI..."
 # Stop existing container if running
 docker rm -f refactor-mcp 2>/dev/null || true
 
-# Check if Docker image exists
-if ! docker images | grep -q "refactor-mcp.*$version"; then
-    echo "Warning: Docker image refactor-mcp:$version not found"
-    echo "Available images:"
-    docker images | grep refactor-mcp || echo "No refactor-mcp images found"
-    echo "Trying to use refactor-mcp:latest..."
-    IMAGE_TAG="latest"
+# Use the correct Docker version that was downloaded
+if [ -n "$docker_version" ] && [ "$docker_version" != "null" ] && [ "$docker_version" != "" ]; then
+    IMAGE_TAG="$docker_version"
+    echo "Using Docker image version: $docker_version"
 else
-    IMAGE_TAG="$version"
+    echo "Warning: No Docker version available, trying latest..."
+    IMAGE_TAG="latest"
 fi
 
 echo "Using image: refactor-mcp:\$IMAGE_TAG"

@@ -2,7 +2,7 @@
 # get-prerelease.sh - Download latest pre-release JAR and Docker image for testing
 
 get_prerelease() {
-    local GITHUB_REPO RELEASE_DATA RELEASES_INFO RELEASE_INFO PRERELEASE VERSION JAR_URL DOCKER_URL
+    local GITHUB_REPO RELEASES_INFO JAR_RELEASE JAR_VERSION JAR_URL DOCKER_RELEASE DOCKER_VERSION DOCKER_URL
 
     # Configuration
     GITHUB_REPO="CodeLaser/refactor"
@@ -14,82 +14,72 @@ get_prerelease() {
         exit 1
     fi
 
-    echo "Fetching latest pre-release for testing..." >&2
+    echo "Fetching latest JAR and Docker releases..." >&2
 
     # Get all releases
     RELEASES_INFO=$(curl -s "https://api.github.com/repos/$GITHUB_REPO/releases")
-    # Find the latest pre-release (not draft) - releases are already sorted by date
-    PRERELEASE=$(echo "$RELEASES_INFO"| tr '\000-\037' ' ' | jq -r '.[] | select(.prerelease == true and .draft == false) | @base64' | head -1)
-    if [ -z "$PRERELEASE" ] || [ "$PRERELEASE" = "null" ]; then
-        echo "No pre-releases found. Getting latest stable release..." >&2
-        RELEASE_INFO=$(curl -s "https://api.github.com/repos/$GITHUB_REPO/releases/latest")
-        VERSION=$(echo "$RELEASE_INFO" | jq -r '.tag_name')
-        JAR_URL=$(echo "$RELEASE_INFO" | jq -r '.assets[] | select(.name | endswith(".jar")) | .browser_download_url' | head -1)
-        DOCKER_URL=$(echo "$RELEASE_INFO" | jq -r '.assets[] | select(.name | test("-docker\\.tar(\\.gz)?$")) | .browser_download_url' | head -1)
-        
-        if [ "$VERSION" = "null" ]; then
-            echo "No releases found in repository" >&2
-            exit 1
-        fi
-    else
-        # Decode and extract info from pre-release
-        RELEASE_DATA=$(echo "$PRERELEASE" | base64 -d)
-        VERSION=$(echo "$RELEASE_DATA" | jq -r '.tag_name')
-        JAR_URL=$(echo "$RELEASE_DATA" | jq -r '.assets[] | select(.name | endswith(".jar")) | .browser_download_url' 2>/dev/null | head -1)
-        DOCKER_URL=$(echo "$RELEASE_DATA" | jq -r '.assets[] | select(.name | test("-docker\\.tar(\\.gz)?$")) | .browser_download_url' 2>/dev/null | head -1)
-        echo "Found pre-release: $VERSION" >&2
-    fi
 
-    if [ -z "$JAR_URL" ] || [ "$JAR_URL" = "null" ]; then
-        echo "No JAR found in release $VERSION" >&2
-        echo "Available assets:" >&2
-        if [ -n "$PRERELEASE" ] && [ "$PRERELEASE" != "null" ]; then
-            echo "$RELEASE_DATA" | jq -r '.assets[].name' >&2
-        else
-            echo "$RELEASE_INFO" | jq -r '.assets[].name' >&2
-        fi
+    # Find latest release with JAR asset
+    JAR_RELEASE=$(echo "$RELEASES_INFO" | tr '\000-\037' ' ' | jq -r '.[] | select(.draft == false and (.assets[] | .name | endswith(".jar"))) | @base64' | head -1)
+    if [ -z "$JAR_RELEASE" ] || [ "$JAR_RELEASE" = "null" ]; then
+        echo "No JAR found in any release" >&2
         exit 1
     fi
 
-    echo "Found version: $VERSION" >&2
+    JAR_VERSION=$(echo "$JAR_RELEASE" | base64 -d | jq -r '.tag_name')
+    JAR_URL=$(echo "$JAR_RELEASE" | base64 -d | jq -r '.assets[] | select(.name | endswith(".jar")) | .browser_download_url' | head -1)
+    echo "Found latest JAR: $JAR_VERSION" >&2
+
+    # Find latest release with Docker asset
+    DOCKER_RELEASE=$(echo "$RELEASES_INFO" | tr '\000-\037' ' ' | jq -r '.[] | select(.draft == false and (.assets[] | .name | test("-docker\\.tar(\\.gz)?$"))) | @base64' | head -1)
+    if [ -z "$DOCKER_RELEASE" ] || [ "$DOCKER_RELEASE" = "null" ]; then
+        echo "No Docker image found in any release" >&2
+        DOCKER_VERSION=""
+        DOCKER_URL=""
+    else
+        DOCKER_VERSION=$(echo "$DOCKER_RELEASE" | base64 -d | jq -r '.tag_name')
+        DOCKER_URL=$(echo "$DOCKER_RELEASE" | base64 -d | jq -r '.assets[] | select(.name | test("-docker\\.tar(\\.gz)?$")) | .browser_download_url' | head -1)
+        echo "Found latest Docker: $DOCKER_VERSION" >&2
+    fi
+
+    # Use JAR version as primary version for backward compatibility
+    VERSION="$JAR_VERSION"
 
     # Download JAR if not present
-    if [ ! -f "refactor-$VERSION.jar" ]; then
+    if [ ! -f "refactor-$JAR_VERSION.jar" ]; then
         echo "Downloading JAR from: $JAR_URL" >&2
-        curl -L -o "refactor-$VERSION.jar" "$JAR_URL" >&2
-        echo "Downloaded: refactor-$VERSION.jar" >&2
+        curl -L -o "refactor-$JAR_VERSION.jar" "$JAR_URL" >&2
+        echo "Downloaded: refactor-$JAR_VERSION.jar" >&2
     else
-        echo "JAR version $VERSION already present" >&2
+        echo "JAR version $JAR_VERSION already present" >&2
     fi
-    
+
     # Download and load Docker image if available and Docker is installed
     if command -v docker >/dev/null 2>&1; then
         if [ -n "$DOCKER_URL" ] && [ "$DOCKER_URL" != "null" ]; then
-            # Check if image is already loaded
-            if ! docker images | grep -q "refactor-mcp.*$VERSION"; then
-                echo "Downloading Docker image..." >&2
-                DOCKER_FILE="refactor-mcp-$VERSION-docker.tar.gz"
-                curl -L -o "$DOCKER_FILE" "$DOCKER_URL" >&2
-                echo "Loading Docker image..." >&2
-                if [[ "$DOCKER_FILE" == *.gz ]]; then
-                    gunzip -c "$DOCKER_FILE" | docker load >&2
-                else
-                    docker load -i "$DOCKER_FILE" >&2
-                fi
-                rm -f "$DOCKER_FILE"
-                echo "Docker image loaded: refactor-mcp:$VERSION" >&2
+            # Always download fresh Docker image (ignore local cache)
+            echo "Downloading latest Docker image..." >&2
+            DOCKER_FILE="refactor-mcp-$DOCKER_VERSION-docker.tar.gz"
+            curl -L -o "$DOCKER_FILE" "$DOCKER_URL" >&2
+            echo "Loading Docker image..." >&2
+            # Remove any existing local images first to ensure fresh load
+            docker images -q refactor-mcp | xargs -r docker rmi -f 2>/dev/null || true
+            if [[ "$DOCKER_FILE" == *.gz ]]; then
+                gunzip -c "$DOCKER_FILE" | docker load >&2
             else
-                echo "Docker image refactor-mcp:$VERSION already loaded" >&2
+                docker load -i "$DOCKER_FILE" >&2
             fi
+            rm -f "$DOCKER_FILE"
+            echo "Docker image loaded: refactor-mcp:$DOCKER_VERSION" >&2
         else
-            echo "No Docker image found in release (will use local build if available)" >&2
+            echo "No Docker image found in any release" >&2
         fi
     else
         echo "Docker not installed, skipping Docker image download" >&2
     fi
-    
-    # return value
-    echo $VERSION
+
+    # Return both versions (JAR version first for backward compatibility, then Docker version)
+    echo "$JAR_VERSION $DOCKER_VERSION"
 }
 
 if [ "${BASH_SOURCE[0]:-$0}" = "${0}" ]; then
