@@ -40,15 +40,70 @@ fi
 
 ##### write or update config/application.properties #####
 
-application_properties="config/application.properties"
+application_properties="config/application.yml"
 
 if [ ! -f "$application_properties" ]; then 
     echo "Writing $application_properties; you may want to edit the Ollama properties for docstring use and generation"
     cat > $application_properties << EOF
-llm.docstringModelName=llama3.2:latest
-llm.docstringProvider=ollama
-llm.docstringBaseUrl=http://localhost:11434
-micronaut.server.port=${java_rest_port}
+micronaut:
+    server:
+        port: ${java_rest_port}
+llm:
+    docstring:
+        modelName: gpt-oss:latest
+        provider: ollama
+        baseUrl: http://localhost:11434
+        prompt: |
+            You are given the Java source code of one or more classes.
+            Your task is to generate concise, plain-text explanations of what each class does.
+            Input Format:
+            The input will consist of one or more Java classes.
+            Each class is clearly delineated using the following markers:
+            ### BEGIN CLASS: <ClassName>
+            <Java source code for this class>
+            ### END CLASS: <ClassName>
+            For very large methods, instead of full method bodies, only a list of invoked method names may be shown. 
+            Example:
+            public void processOrder(Order order) {
+                // calls: validateOrder, calculateTotal, saveOrder, notifyCustomer
+            }
+            Output Format:
+            For each class, produce a short, human-readable explanation of what the class is and what it does.
+            Delineate your output with the following markers:
+            ### BEGIN SUMMARY: <ClassName>
+            <one or two concise paragraphs explaining the class>
+            ### END SUMMARY: <ClassName>
+            Requirements:
+            - Focus only on the class as a whole
+            - Explain its main purpose, responsibilities, and role in the system.
+            - Mention if it represents a concept/entity, manages data, coordinates logic, or provides utilities.
+            Conciseness:
+            - 2–5 sentences maximum per class.
+            - avoid repeating method-level details unless they are central to the class’s purpose.
+            Abstraction Level:
+            - Summarize intent, not implementation.
+            If method bodies are replaced with call lists, infer class purpose from the invoked methods.
+            Plain Text Only! Do not use JavaDoc (/** ... */) or code formatting.
+            Output should be natural text, suitable for embeddings and semantic comparison.
+            Example:
+            Input:
+            ### BEGIN CLASS: OrderService
+            public class OrderService {
+                public void processOrder(Order order) {
+                    // calls: validateOrder, calculateTotal, saveOrder, notifyCustomer
+                }
+                public double calculateTotal(Order order) {
+                    // ...
+                }
+            }
+            ### END CLASS: OrderService
+            Output:
+            ### BEGIN SUMMARY: OrderService
+            The OrderService class is responsible for handling the end-to-end processing of customer orders.  
+            It validates incoming orders, calculates the total cost, persists the order to storage, and ensures that customers are notified.  
+            This class centralizes core order-management logic in the system.
+            ### END SUMMARY: OrderService
+            End of example. Now comes the real classes to examine.
 EOF
 else
     current_port=$(grep "^micronaut.server.port=" $application_properties | cut -d'=' -f2)
