@@ -4,8 +4,8 @@ CodeLaser Refactor
 ## Quick Install
 
 ```bash
-curl -L -o install_or_update.sh https://raw.githubusercontent.com/CodeLaser/refactor/main/install_or_update.sh
-chmod +x install_or_update.sh
+git clone git@github.com:CodeLaser/refactor.git
+cd refactor
 ./install_or_update.sh
 ```
 
@@ -30,9 +30,9 @@ This downloads and configures:
 ## Endpoints
 
 After installation:
-- React UI: `http://localhost:PORT+2`
-- MCP server: `http://localhost:PORT+1/mcp`
 - Java REST API: `http://localhost:PORT`
+- MCP server: `http://localhost:PORT+1/mcp`
+- React UI: `http://localhost:PORT+2`
 - Configure server: `http://localhost:PORT+3/mcp-configure`
 
 Ports are auto-allocated starting from 12340.
@@ -40,6 +40,7 @@ Ports are auto-allocated starting from 12340.
 ## Requirements
 
 - `jq`
--  mcp-proxy: 'https://github.com/sparfenyuk/mcp-proxy' 
-- `docker` (optional, for MCP server and UI)
-- Java 17+ (for REST server)
+- for the mcp servers and UI:
+  -  mcp-proxy: 'https://github.com/sparfenyuk/mcp-proxy' 
+  - `docker`
+- Java 24+ (for REST server)
