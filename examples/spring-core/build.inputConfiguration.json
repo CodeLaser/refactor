@@ -1,0 +1,503 @@
+{
+  "workingDirectory" : ".",
+  "classPathParts" : [ {
+    "name" : "java.sql",
+    "uri" : "jmod:java.sql",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.rmi",
+    "uri" : "jmod:java.rmi",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.xml.crypto",
+    "uri" : "jmod:java.xml.crypto",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.logging",
+    "uri" : "jmod:java.logging",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.transaction.xa",
+    "uri" : "jmod:java.transaction.xa",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.sql.rowset",
+    "uri" : "jmod:java.sql.rowset",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.xml",
+    "uri" : "jmod:java.xml",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.management",
+    "uri" : "jmod:java.management",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "jdk.jfr",
+    "uri" : "jmod:jdk.jfr",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.datatransfer",
+    "uri" : "jmod:java.datatransfer",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.instrument",
+    "uri" : "jmod:java.instrument",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.security.jgss",
+    "uri" : "jmod:java.security.jgss",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.desktop",
+    "uri" : "jmod:java.desktop",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.naming",
+    "uri" : "jmod:java.naming",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.compiler",
+    "uri" : "jmod:java.compiler",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.scripting",
+    "uri" : "jmod:java.scripting",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.prefs",
+    "uri" : "jmod:java.prefs",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.net.http",
+    "uri" : "jmod:java.net.http",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.security.sasl",
+    "uri" : "jmod:java.security.sasl",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.management.rmi",
+    "uri" : "jmod:java.management.rmi",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.base",
+    "uri" : "jmod:java.base",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "/Users/bnaudts/git/test-oss/spring-framework/spring-core/build/classes/kotlin/main",
+    "uri" : "file:/Users/bnaudts/git/test-oss/spring-framework/spring-core/build/classes/kotlin/main",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "/Users/bnaudts/git/test-oss/spring-framework/spring-core/build/classes/kotlin/test",
+    "uri" : "file:/Users/bnaudts/git/test-oss/spring-framework/spring-core/build/classes/kotlin/test",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "android-json-0.0.20131108.vaadin1.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/com.vaadin.external.google/android-json/0.0.20131108.vaadin1/fa26d351fe62a6a17f5cda1287c1c6110dec413f/android-json-0.0.20131108.vaadin1.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "annotations-23.0.0.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/23.0.0/8cc20c07506ec18e0834947b84a864bfc094484e/annotations-23.0.0.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "apiguardian-api-1.1.2.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/org.apiguardian/apiguardian-api/1.1.2/a231e0d844d2721b0fa1b238006d15c6ded6842a/apiguardian-api-1.1.2.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "aspectjweaver-1.9.22.1.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/org.aspectj/aspectjweaver/1.9.22.1/bca243d0af0db4758fbae45c5f4995cb5dabb612/aspectjweaver-1.9.22.1.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "assertj-core-3.27.3.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/org.assertj/assertj-core/3.27.3/31f5d58a202bd5df4993fb10fa2cffd610c20d6f/assertj-core-3.27.3.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "blockhound-1.0.8.RELEASE.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/io.projectreactor.tools/blockhound/1.0.8.RELEASE/e0dd72a1e2bc8e6a4e9f5ea3732a583695d9f0b6/blockhound-1.0.8.RELEASE.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "byte-buddy-1.15.11.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy/1.15.11/f61886478e0f9ee4c21d09574736f0ff45e0a46c/byte-buddy-1.15.11.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "byte-buddy-agent-1.14.15.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.14.15/b4cc9d88d5de562bf75b3a54ab436ad01b3f72d/byte-buddy-agent-1.14.15.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "context-propagation-1.1.1.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/io.micrometer/context-propagation/1.1.1/7c62beb1188d7458f5a4b60fcaf4a795cc290508/context-propagation-1.1.1.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "graal-sdk-22.3.1.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/org.graalvm.sdk/graal-sdk/22.3.1/c2c1e3495b04729abbe717173558cfe3cc8bf6f8/graal-sdk-22.3.1.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "hamcrest-core-1.3.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "jackson-annotations-2.15.4.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.15.4/5223ea5a9bf52cdc9c5e537a0e52f2432eaf208b/jackson-annotations-2.15.4.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "jackson-core-2.15.4.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.15.4/aebe84b45360debad94f692a4074c6aceb535fa0/jackson-core-2.15.4.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "jackson-databind-2.15.4.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.15.4/560309fc381f77d4d15c4a4cdaa0db5025c4fd13/jackson-databind-2.15.4.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "jakarta.activation-2.0.1.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/com.sun.activation/jakarta.activation/2.0.1/828b80e886a52bb09fe41ff410b10b342f533ce1/jakarta.activation-2.0.1.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "jakarta.annotation-api-2.0.0.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/jakarta.annotation/jakarta.annotation-api/2.0.0/f3cd84cc45f583a0fdc42a8156d6c5b98d625c1a/jakarta.annotation-api-2.0.0.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "jakarta.xml.bind-api-3.0.1.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/jakarta.xml.bind/jakarta.xml.bind-api/3.0.1/5257932df36ff3e4e6de50429dde946490a6a800/jakarta.xml.bind-api-3.0.1.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "jopt-simple-5.0.4.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/net.sf.jopt-simple/jopt-simple/5.0.4/4fdac2fbe92dfad86aa6e9301736f6b4342a3f5c/jopt-simple-5.0.4.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "jsonassert-1.5.3.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/org.skyscreamer/jsonassert/1.5.3/aaa43e0823d2a0e106e8754d6a9c4ab24e05e9bc/jsonassert-1.5.3.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "jsr305-3.0.2.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.2/25ea2e8b0c338a877313bd4672d3fe056ea78f0d/jsr305-3.0.2.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "junit-4.13.2.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/junit/junit/4.13.2/8ac9e16d933b6fb43bc7f576336b8f4d7eb5ba12/junit-4.13.2.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "junit-jupiter-api-5.10.5.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.10.5/a5c09855b0087daaddaa5faa5100ab2555d5e111/junit-jupiter-api-5.10.5.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "junit-jupiter-params-5.10.5.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-params/5.10.5/e19d95e190aedb81c883d50cc05b1860400d957c/junit-jupiter-params-5.10.5.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "junit-platform-commons-1.10.5.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.10.5/6d1985c5eece30fb9faafe9bf1f5e005ac3d0fcc/junit-platform-commons-1.10.5.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "junit-platform-engine-1.10.5.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.10.5/7db4b98a955a2686d893a8a209591f029c438b44/junit-platform-engine-1.10.5.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "junit-platform-launcher-1.10.5.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-launcher/1.10.5/3b16b91a447cf687c968ee23d21827534fdac5a2/junit-platform-launcher-1.10.5.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "junit-platform-suite-api-1.10.5.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-suite-api/1.10.5/d1a341b306cfd43c5d52658f21804f918fca367b/junit-platform-suite-api-1.10.5.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "kotlin-reflect-1.9.25.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.9.25/73023c38b7b20430232893cf9b556dc8486e07a4/kotlin-reflect-1.9.25.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "kotlin-stdlib-1.9.25.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.9.25/f700a2f2b8f0d6d0fde48f56d894dc722fb029d7/kotlin-stdlib-1.9.25.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "kotlin-stdlib-jdk7-1.8.20.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.8.20/3aa51faf20aae8b31e1a4bc54f8370673d7b7df4/kotlin-stdlib-jdk7-1.8.20.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "kotlin-stdlib-jdk8-1.8.20.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk8/1.8.20/73576ddf378c5b4f1f6b449fe6b119b8183fc078/kotlin-stdlib-jdk8-1.8.20.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "kotlinx-coroutines-core-jvm-1.7.3.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-jvm/1.7.3/2b09627576f0989a436a00a4a54b55fa5026fb86/kotlinx-coroutines-core-jvm-1.7.3.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "kotlinx-coroutines-reactive-1.7.3.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-reactive/1.7.3/3f30c8dd5cd0993ca2804591210141be762786f8/kotlinx-coroutines-reactive-1.7.3.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "kotlinx-coroutines-reactor-1.7.3.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-reactor/1.7.3/13f57f47efc246ad33ec09eaac57a6b0ea352686/kotlinx-coroutines-reactor-1.7.3.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "kotlinx-serialization-core-jvm-1.6.3.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-serialization-core-jvm/1.6.3/6b6c17d0312ba7192893adea9d52959941d0119b/kotlinx-serialization-core-jvm-1.6.3.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "kotlinx-serialization-json-jvm-1.6.3.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-serialization-json-jvm/1.6.3/2241746853abf04073e3ab0dcd9e6729d363b313/kotlinx-serialization-json-jvm-1.6.3.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "log4j-api-2.21.1.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.21.1/74c65e87b9ce1694a01524e192d7be989ba70486/log4j-api-2.21.1.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "mockito-core-5.12.0.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/5.12.0/22f8bbaf478e6789164787fa411a3b5ed986e110/mockito-core-5.12.0.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "mockito-junit-jupiter-5.12.0.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-junit-jupiter/5.12.0/879cbbd8ec07813d7330c2b2454eb1a77c84b7f7/mockito-junit-jupiter-5.12.0.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "mockk-agent-api-jvm-1.13.4.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/io.mockk/mockk-agent-api-jvm/1.13.4/c509b7a77661b98b057d575ca77a3b86d06feb39/mockk-agent-api-jvm-1.13.4.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "mockk-agent-jvm-1.13.4.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/io.mockk/mockk-agent-jvm/1.13.4/76f894e361a0cf4cde00d87fc64806b3dd69e9e5/mockk-agent-jvm-1.13.4.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "mockk-core-jvm-1.13.4.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/io.mockk/mockk-core-jvm/1.13.4/f0d5d55696b5f080bb6dbfb6452da9a7a20a8b32/mockk-core-jvm-1.13.4.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "mockk-dsl-jvm-1.13.4.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/io.mockk/mockk-dsl-jvm/1.13.4/1325a59316ede5cc6069ea0dc0557660903efe75/mockk-dsl-jvm-1.13.4.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "mockk-jvm-1.13.4.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/io.mockk/mockk-jvm/1.13.4/e57714f14d47597dc875ce32e2fabc21ab3fae05/mockk-jvm-1.13.4.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "mockwebserver-3.14.9.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/mockwebserver/3.14.9/3154829b4acb845bfea141eb1226e64a9ccb5c98/mockwebserver-3.14.9.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "mutiny-1.10.0.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/io.smallrye.reactive/mutiny/1.10.0/e3302d0f42b6c915818b78eefb07136348b65b51/mutiny-1.10.0.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "netty-buffer-4.1.119.Final.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/io.netty/netty-buffer/4.1.119.Final/5864149b2e5a2af7b05fe9e9dc3e4b70d3060a7c/netty-buffer-4.1.119.Final.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "netty-common-4.1.119.Final.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/io.netty/netty-common/4.1.119.Final/2f7c360b03c0aceab7efc1f7c2b75274f0f35909/netty-common-4.1.119.Final.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "netty5-buffer-5.0.0.Alpha5.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/io.netty/netty5-buffer/5.0.0.Alpha5/b155d511ca60399a710bea408d4c89da4a179608/netty5-buffer-5.0.0.Alpha5.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "netty5-common-5.0.0.Alpha5.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/io.netty/netty5-common/5.0.0.Alpha5/e262e3f1bca572e7d061cd959b2d357bba1bd711/netty5-common-5.0.0.Alpha5.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "objenesis-3.3.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/3.3/1049c09f1de4331e8193e579448d0916d75b7631/objenesis-3.3.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "okhttp-3.14.9.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.14.9/3e6d101343c7ea687cd593e4990f73b25c878383/okhttp-3.14.9.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "okio-1.17.2.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.17.2/78c7820b205002da4d2d137f6f312bd64b3d6049/okio-1.17.2.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "opentest4j-1.3.0.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.3.0/152ea56b3a72f655d4fd677fc0ef2596c3dd5e6e/opentest4j-1.3.0.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "reactive-streams-1.0.4.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/org.reactivestreams/reactive-streams/1.0.4/3864a1320d97d7b045f729a326e1e077661f31b7/reactive-streams-1.0.4.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "reactor-core-3.6.15.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/io.projectreactor/reactor-core/3.6.15/619b096510f47b7fbb3c5f517f50ebd2586dd195/reactor-core-3.6.15.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "reactor-test-3.6.15.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/io.projectreactor/reactor-test/3.6.15/6acbed829f82dce164d8e862a2cf812346a6181d/reactor-test-3.6.15.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "rxjava-3.1.10.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/io.reactivex.rxjava3/rxjava/3.1.10/d980c75b983334eeb9a7ea1a252d044f5e6cdf77/rxjava-3.1.10.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "slf4j-api-2.0.16.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/2.0.16/172931663a09a1fa515567af5fbef00897d3c04/slf4j-api-2.0.16.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "smallrye-common-annotation-1.13.0.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/io.smallrye.common/smallrye-common-annotation/1.13.0/80c0b5cf5a2a255b14d8a16a5424b57ab72bcacb/smallrye-common-annotation-1.13.0.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "spring-javapoet-repack-1.13.0.jar",
+    "uri" : "file:/Users/bnaudts/git/test-oss/spring-framework/spring-core/build/libs/spring-javapoet-repack-1.13.0.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "spring-objenesis-repack-3.4.jar",
+    "uri" : "file:/Users/bnaudts/git/test-oss/spring-framework/spring-core/build/libs/spring-objenesis-repack-3.4.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "stax2-api-4.2.2.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/org.codehaus.woodstox/stax2-api/4.2.2/b0d746cadea928e5264f2ea294ea9a1bf815bbde/stax2-api-4.2.2.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "woodstox-core-6.6.2.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/com.fasterxml.woodstox/woodstox-core/6.6.2/bfe905f19ce0e60bff5b7adcbded2681a092ac3/woodstox-core-6.6.2.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "xmlunit-assertj-2.9.1.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/org.xmlunit/xmlunit-assertj/2.9.1/483787f132b1e8c3b0a80b8918ef6f73370f6743/xmlunit-assertj-2.9.1.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "xmlunit-core-2.9.1.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/org.xmlunit/xmlunit-core/2.9.1/e5833662d9a1279a37da3ef6f62a1da29fcd68c4/xmlunit-core-2.9.1.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "xmlunit-matchers-2.9.1.jar",
+    "uri" : "file:/Users/bnaudts/.gradle/caches/modules-2/files-2.1/org.xmlunit/xmlunit-matchers/2.9.1/a8fc4434bca3c3980727ce7f305fa593dfad5b60/xmlunit-matchers-2.9.1.jar",
+    "library" : true,
+    "externalLibrary" : true
+  } ],
+  "sourceSets" : [ {
+    "sourceEncoding" : "UTF-8",
+    "name" : "spring-jcl/main",
+    "sourceDirectories" : [ "/Users/bnaudts/git/test-oss/spring-framework/spring-jcl/src/main/java" ],
+    "uri" : "file:/Users/bnaudts/git/test-oss/spring-framework/spring-jcl/build/classes/java/main",
+    "dependencies" : [ "jsr305-3.0.2.jar", "log4j-api-2.21.1.jar", "slf4j-api-2.0.16.jar" ]
+  }, {
+    "sourceEncoding" : "UTF-8",
+    "name" : "spring-core/main",
+    "sourceDirectories" : [ "/Users/bnaudts/git/test-oss/spring-framework/spring-core/src/main/java" ],
+    "uri" : "file:/Users/bnaudts/git/test-oss/spring-framework/spring-core/build/classes/java/main",
+    "dependencies" : [ "kotlinx-coroutines-reactive-1.7.3.jar", "kotlinx-coroutines-reactor-1.7.3.jar", "kotlin-stdlib-jdk7-1.8.20.jar", "mutiny-1.10.0.jar", "netty-common-4.1.119.Final.jar", "spring-objenesis-repack-3.4.jar", "rxjava-3.1.10.jar", "aspectjweaver-1.9.22.1.jar", "blockhound-1.0.8.RELEASE.jar", "kotlin-reflect-1.9.25.jar", "jopt-simple-5.0.4.jar", "context-propagation-1.1.1.jar", "annotations-23.0.0.jar", "reactor-core-3.6.15.jar", "kotlin-stdlib-1.9.25.jar", "jsr305-3.0.2.jar", "/Users/bnaudts/git/test-oss/spring-framework/spring-core/build/classes/kotlin/main", "netty5-buffer-5.0.0.Alpha5.jar", "kotlin-stdlib-jdk8-1.8.20.jar", "graal-sdk-22.3.1.jar", "reactive-streams-1.0.4.jar", "netty5-common-5.0.0.Alpha5.jar", "spring-javapoet-repack-1.13.0.jar", "spring-jcl/main", "smallrye-common-annotation-1.13.0.jar", "netty-buffer-4.1.119.Final.jar", "kotlinx-coroutines-core-jvm-1.7.3.jar" ]
+  }, {
+    "sourceEncoding" : "UTF-8",
+    "name" : "java/testFixtures",
+    "sourceDirectories" : [ "/Users/bnaudts/git/test-oss/spring-framework/spring-core/src/testFixtures/java" ],
+    "uri" : "file:/Users/bnaudts/git/test-oss/spring-framework/spring-core/build/classes/java/testFixtures",
+    "test" : true,
+    "dependencies" : [ "kotlinx-coroutines-reactive-1.7.3.jar", "kotlinx-coroutines-reactor-1.7.3.jar", "kotlin-stdlib-jdk7-1.8.20.jar", "xmlunit-assertj-2.9.1.jar", "mutiny-1.10.0.jar", "netty-common-4.1.119.Final.jar", "spring-objenesis-repack-3.4.jar", "rxjava-3.1.10.jar", "aspectjweaver-1.9.22.1.jar", "blockhound-1.0.8.RELEASE.jar", "kotlin-reflect-1.9.25.jar", "junit-platform-commons-1.10.5.jar", "jopt-simple-5.0.4.jar", "junit-platform-launcher-1.10.5.jar", "context-propagation-1.1.1.jar", "annotations-23.0.0.jar", "reactor-test-3.6.15.jar", "reactor-core-3.6.15.jar", "kotlin-stdlib-1.9.25.jar", "junit-platform-engine-1.10.5.jar", "/Users/bnaudts/git/test-oss/spring-framework/spring-core/build/classes/kotlin/main", "jsr305-3.0.2.jar", "netty5-buffer-5.0.0.Alpha5.jar", "byte-buddy-1.15.11.jar", "assertj-core-3.27.3.jar", "xmlunit-core-2.9.1.jar", "kotlin-stdlib-jdk8-1.8.20.jar", "spring-core/main", "graal-sdk-22.3.1.jar", "junit-jupiter-params-5.10.5.jar", "reactive-streams-1.0.4.jar", "netty5-common-5.0.0.Alpha5.jar", "apiguardian-api-1.1.2.jar", "junit-jupiter-api-5.10.5.jar", "opentest4j-1.3.0.jar", "spring-javapoet-repack-1.13.0.jar", "spring-jcl/main", "smallrye-common-annotation-1.13.0.jar", "netty-buffer-4.1.119.Final.jar", "kotlinx-coroutines-core-jvm-1.7.3.jar" ]
+  }, {
+    "sourceEncoding" : "UTF-8",
+    "name" : "java/test",
+    "sourceDirectories" : [ "/Users/bnaudts/git/test-oss/spring-framework/spring-core/src/test/java" ],
+    "uri" : "file:/Users/bnaudts/git/test-oss/spring-framework/spring-core/build/classes/java/test",
+    "test" : true,
+    "dependencies" : [ "kotlinx-coroutines-reactive-1.7.3.jar", "kotlinx-serialization-core-jvm-1.6.3.jar", "kotlin-stdlib-jdk7-1.8.20.jar", "mutiny-1.10.0.jar", "netty-common-4.1.119.Final.jar", "spring-objenesis-repack-3.4.jar", "rxjava-3.1.10.jar", "aspectjweaver-1.9.22.1.jar", "kotlin-reflect-1.9.25.jar", "jackson-databind-2.15.4.jar", "junit-platform-commons-1.10.5.jar", "junit-platform-launcher-1.10.5.jar", "context-propagation-1.1.1.jar", "annotations-23.0.0.jar", "reactor-core-3.6.15.jar", "kotlin-stdlib-1.9.25.jar", "junit-platform-engine-1.10.5.jar", "/Users/bnaudts/git/test-oss/spring-framework/spring-core/build/classes/kotlin/main", "netty5-buffer-5.0.0.Alpha5.jar", "byte-buddy-1.15.11.jar", "byte-buddy-agent-1.14.15.jar", "mockk-jvm-1.13.4.jar", "assertj-core-3.27.3.jar", "junit-4.13.2.jar", "/Users/bnaudts/git/test-oss/spring-framework/spring-core/build/classes/kotlin/test", "reactive-streams-1.0.4.jar", "kotlinx-serialization-json-jvm-1.6.3.jar", "jakarta.activation-2.0.1.jar", "netty5-common-5.0.0.Alpha5.jar", "jackson-core-2.15.4.jar", "mockito-junit-jupiter-5.12.0.jar", "jakarta.xml.bind-api-3.0.1.jar", "okhttp-3.14.9.jar", "mockk-agent-api-jvm-1.13.4.jar", "spring-jcl/main", "stax2-api-4.2.2.jar", "smallrye-common-annotation-1.13.0.jar", "kotlinx-coroutines-core-jvm-1.7.3.jar", "junit-platform-suite-api-1.10.5.jar", "mockk-dsl-jvm-1.13.4.jar", "kotlinx-coroutines-reactor-1.7.3.jar", "xmlunit-assertj-2.9.1.jar", "xmlunit-matchers-2.9.1.jar", "blockhound-1.0.8.RELEASE.jar", "jopt-simple-5.0.4.jar", "mockk-core-jvm-1.13.4.jar", "hamcrest-core-1.3.jar", "mockk-agent-jvm-1.13.4.jar", "okio-1.17.2.jar", "reactor-test-3.6.15.jar", "jsr305-3.0.2.jar", "mockwebserver-3.14.9.jar", "xmlunit-core-2.9.1.jar", "kotlin-stdlib-jdk8-1.8.20.jar", "android-json-0.0.20131108.vaadin1.jar", "spring-core/main", "junit-jupiter-params-5.10.5.jar", "woodstox-core-6.6.2.jar", "java/testFixtures", "apiguardian-api-1.1.2.jar", "junit-jupiter-api-5.10.5.jar", "opentest4j-1.3.0.jar", "jakarta.annotation-api-2.0.0.jar", "spring-javapoet-repack-1.13.0.jar", "jackson-annotations-2.15.4.jar", "netty-buffer-4.1.119.Final.jar", "mockito-core-5.12.0.jar", "jsonassert-1.5.3.jar", "objenesis-3.3.jar" ]
+  } ],
+  "alternativeJREDirectory" : null
+}

@@ -1,0 +1,629 @@
+{
+  "workingDirectory" : ".",
+  "classPathParts" : [ {
+    "name" : "java.sql",
+    "uri" : "jmod:java.sql",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.rmi",
+    "uri" : "jmod:java.rmi",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.xml.crypto",
+    "uri" : "jmod:java.xml.crypto",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.logging",
+    "uri" : "jmod:java.logging",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.transaction.xa",
+    "uri" : "jmod:java.transaction.xa",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.sql.rowset",
+    "uri" : "jmod:java.sql.rowset",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.xml",
+    "uri" : "jmod:java.xml",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.management",
+    "uri" : "jmod:java.management",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.datatransfer",
+    "uri" : "jmod:java.datatransfer",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.instrument",
+    "uri" : "jmod:java.instrument",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.security.jgss",
+    "uri" : "jmod:java.security.jgss",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.desktop",
+    "uri" : "jmod:java.desktop",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.naming",
+    "uri" : "jmod:java.naming",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.compiler",
+    "uri" : "jmod:java.compiler",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.scripting",
+    "uri" : "jmod:java.scripting",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.prefs",
+    "uri" : "jmod:java.prefs",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.net.http",
+    "uri" : "jmod:java.net.http",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.security.sasl",
+    "uri" : "jmod:java.security.sasl",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.management.rmi",
+    "uri" : "jmod:java.management.rmi",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.base",
+    "uri" : "jmod:java.base",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "accessors-smart-2.5.2.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/net/minidev/accessors-smart/2.5.2/accessors-smart-2.5.2.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "apiguardian-api-1.1.2.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "asm-9.7.1.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/org/ow2/asm/asm/9.7.1/asm-9.7.1.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "awaitility-4.3.0.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/org/awaitility/awaitility/4.3.0/awaitility-4.3.0.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "azure-core-1.55.3.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/com/azure/azure-core/1.55.3/azure-core-1.55.3.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "azure-core-http-netty-1.15.11.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/com/azure/azure-core-http-netty/1.15.11/azure-core-http-netty-1.15.11.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "azure-identity-1.15.4.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/com/azure/azure-identity/1.15.4/azure-identity-1.15.4.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "azure-json-1.5.0.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/com/azure/azure-json/1.5.0/azure-json-1.5.0.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "azure-xml-1.2.0.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/com/azure/azure-xml/1.2.0/azure-xml-1.2.0.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "byte-buddy-1.12.19.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/net/bytebuddy/byte-buddy/1.12.19/byte-buddy-1.12.19.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "byte-buddy-agent-1.12.19.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/net/bytebuddy/byte-buddy-agent/1.12.19/byte-buddy-agent-1.12.19.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "cache-api-1.1.0.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/javax/cache/cache-api/1.1.0/cache-api-1.1.0.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "commons-pool2-2.12.1.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/org/apache/commons/commons-pool2/2.12.1/commons-pool2-2.12.1.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "content-type-2.3.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/com/nimbusds/content-type/2.3/content-type-2.3.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "error_prone_annotations-2.38.0.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/com/google/errorprone/error_prone_annotations/2.38.0/error_prone_annotations-2.38.0.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "gson-2.13.1.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/com/google/code/gson/gson/2.13.1/gson-2.13.1.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "hamcrest-3.0.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/org/hamcrest/hamcrest/3.0/hamcrest-3.0.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "hamcrest-core-2.2.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/org/hamcrest/hamcrest-core/2.2/hamcrest-core-2.2.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "httpclient5-5.5.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.5/httpclient5-5.5.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "httpclient5-fluent-5.5.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/org/apache/httpcomponents/client5/httpclient5-fluent/5.5/httpclient5-fluent-5.5.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "httpcore5-5.3.4.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.3.4/httpcore5-5.3.4.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "httpcore5-h2-5.3.4.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.3.4/httpcore5-h2-5.3.4.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "jackson-annotations-2.20.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.20/jackson-annotations-2.20.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "jackson-core-2.20.0.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.20.0/jackson-core-2.20.0.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "jackson-databind-2.20.0.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.20.0/jackson-databind-2.20.0.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "jackson-datatype-jsr310-2.20.0.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.20.0/jackson-datatype-jsr310-2.20.0.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "java-jwt-4.5.0.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/com/auth0/java-jwt/4.5.0/java-jwt-4.5.0.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "jcip-annotations-1.0-1.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/com/github/stephenc/jcip/jcip-annotations/1.0-1/jcip-annotations-1.0-1.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "jna-5.13.0.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "jna-platform-5.13.0.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/net/java/dev/jna/jna-platform/5.13.0/jna-platform-5.13.0.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "json-20250517.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/org/json/json/20250517/json-20250517.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "json-smart-2.5.2.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/net/minidev/json-smart/2.5.2/json-smart-2.5.2.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "json-unit-2.40.1.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/net/javacrumbs/json-unit/json-unit/2.40.1/json-unit-2.40.1.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "json-unit-core-2.40.1.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/net/javacrumbs/json-unit/json-unit-core/2.40.1/json-unit-core-2.40.1.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "jts-core-1.20.0.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/org/locationtech/jts/jts-core/1.20.0/jts-core-1.20.0.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "junit-jupiter-api-5.13.4.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.13.4/junit-jupiter-api-5.13.4.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "junit-jupiter-engine-5.13.4.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.13.4/junit-jupiter-engine-5.13.4.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "junit-jupiter-params-5.13.4.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.13.4/junit-jupiter-params-5.13.4.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "junit-platform-commons-1.13.4.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/org/junit/platform/junit-platform-commons/1.13.4/junit-platform-commons-1.13.4.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "junit-platform-engine-1.13.4.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/org/junit/platform/junit-platform-engine/1.13.4/junit-platform-engine-1.13.4.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "junixsocket-common-2.10.1.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/com/kohlschutter/junixsocket/junixsocket-common/2.10.1/junixsocket-common-2.10.1.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "junixsocket-native-common-2.10.1.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/com/kohlschutter/junixsocket/junixsocket-native-common/2.10.1/junixsocket-native-common-2.10.1.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "lang-tag-1.7.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/com/nimbusds/lang-tag/1.7/lang-tag-1.7.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "logback-classic-1.2.13.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/ch/qos/logback/logback-classic/1.2.13/logback-classic-1.2.13.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "logback-core-1.2.13.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/ch/qos/logback/logback-core/1.2.13/logback-core-1.2.13.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "mockito-core-4.11.0.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/org/mockito/mockito-core/4.11.0/mockito-core-4.11.0.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "mockito-inline-4.11.0.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/org/mockito/mockito-inline/4.11.0/mockito-inline-4.11.0.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "mockito-junit-jupiter-4.11.0.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/org/mockito/mockito-junit-jupiter/4.11.0/mockito-junit-jupiter-4.11.0.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "msal4j-1.19.1.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/com/microsoft/azure/msal4j/1.19.1/msal4j-1.19.1.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "msal4j-persistence-extension-1.3.0.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/com/microsoft/azure/msal4j-persistence-extension/1.3.0/msal4j-persistence-extension-1.3.0.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "netty-buffer-4.1.118.Final.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/io/netty/netty-buffer/4.1.118.Final/netty-buffer-4.1.118.Final.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "netty-codec-4.1.118.Final.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/io/netty/netty-codec/4.1.118.Final/netty-codec-4.1.118.Final.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "netty-codec-dns-4.1.112.Final.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/io/netty/netty-codec-dns/4.1.112.Final/netty-codec-dns-4.1.112.Final.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "netty-codec-http-4.1.118.Final.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/io/netty/netty-codec-http/4.1.118.Final/netty-codec-http-4.1.118.Final.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "netty-codec-http2-4.1.118.Final.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/io/netty/netty-codec-http2/4.1.118.Final/netty-codec-http2-4.1.118.Final.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "netty-codec-socks-4.1.118.Final.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/io/netty/netty-codec-socks/4.1.118.Final/netty-codec-socks-4.1.118.Final.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "netty-common-4.1.118.Final.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/io/netty/netty-common/4.1.118.Final/netty-common-4.1.118.Final.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "netty-handler-4.1.118.Final.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/io/netty/netty-handler/4.1.118.Final/netty-handler-4.1.118.Final.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "netty-handler-proxy-4.1.118.Final.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/io/netty/netty-handler-proxy/4.1.118.Final/netty-handler-proxy-4.1.118.Final.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "netty-resolver-4.1.118.Final.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/io/netty/netty-resolver/4.1.118.Final/netty-resolver-4.1.118.Final.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "netty-resolver-dns-4.1.112.Final.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/io/netty/netty-resolver-dns/4.1.112.Final/netty-resolver-dns-4.1.112.Final.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "netty-resolver-dns-classes-macos-4.1.112.Final.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/io/netty/netty-resolver-dns-classes-macos/4.1.112.Final/netty-resolver-dns-classes-macos-4.1.112.Final.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "netty-resolver-dns-native-macos-4.1.112.Final-osx-x86_64.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/io/netty/netty-resolver-dns-native-macos/4.1.112.Final/netty-resolver-dns-native-macos-4.1.112.Final-osx-x86_64.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "netty-tcnative-boringssl-static-2.0.70.Final-linux-aarch_64.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/io/netty/netty-tcnative-boringssl-static/2.0.70.Final/netty-tcnative-boringssl-static-2.0.70.Final-linux-aarch_64.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "netty-tcnative-boringssl-static-2.0.70.Final-linux-x86_64.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/io/netty/netty-tcnative-boringssl-static/2.0.70.Final/netty-tcnative-boringssl-static-2.0.70.Final-linux-x86_64.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "netty-tcnative-boringssl-static-2.0.70.Final-osx-aarch_64.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/io/netty/netty-tcnative-boringssl-static/2.0.70.Final/netty-tcnative-boringssl-static-2.0.70.Final-osx-aarch_64.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "netty-tcnative-boringssl-static-2.0.70.Final-osx-x86_64.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/io/netty/netty-tcnative-boringssl-static/2.0.70.Final/netty-tcnative-boringssl-static-2.0.70.Final-osx-x86_64.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "netty-tcnative-boringssl-static-2.0.70.Final-windows-x86_64.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/io/netty/netty-tcnative-boringssl-static/2.0.70.Final/netty-tcnative-boringssl-static-2.0.70.Final-windows-x86_64.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "netty-tcnative-boringssl-static-2.0.70.Final.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/io/netty/netty-tcnative-boringssl-static/2.0.70.Final/netty-tcnative-boringssl-static-2.0.70.Final.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "netty-tcnative-classes-2.0.70.Final.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/io/netty/netty-tcnative-classes/2.0.70.Final/netty-tcnative-classes-2.0.70.Final.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "netty-transport-4.1.118.Final.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/io/netty/netty-transport/4.1.118.Final/netty-transport-4.1.118.Final.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "netty-transport-classes-epoll-4.1.118.Final.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/io/netty/netty-transport-classes-epoll/4.1.118.Final/netty-transport-classes-epoll-4.1.118.Final.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "netty-transport-classes-kqueue-4.1.118.Final.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/io/netty/netty-transport-classes-kqueue/4.1.118.Final/netty-transport-classes-kqueue-4.1.118.Final.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "netty-transport-native-epoll-4.1.118.Final-linux-x86_64.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/io/netty/netty-transport-native-epoll/4.1.118.Final/netty-transport-native-epoll-4.1.118.Final-linux-x86_64.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "netty-transport-native-kqueue-4.1.118.Final-osx-x86_64.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/io/netty/netty-transport-native-kqueue/4.1.118.Final/netty-transport-native-kqueue-4.1.118.Final-osx-x86_64.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "netty-transport-native-unix-common-4.1.118.Final.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.118.Final/netty-transport-native-unix-common-4.1.118.Final.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "nimbus-jose-jwt-10.0.1.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/com/nimbusds/nimbus-jose-jwt/10.0.1/nimbus-jose-jwt-10.0.1.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "oauth2-oidc-sdk-11.23.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/com/nimbusds/oauth2-oidc-sdk/11.23/oauth2-oidc-sdk-11.23.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "objenesis-3.3.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "opentest4j-1.3.0.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "reactive-streams-1.0.4.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "reactor-core-3.4.41.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/io/projectreactor/reactor-core/3.4.41/reactor-core-3.4.41.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "reactor-netty-core-1.0.48.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/io/projectreactor/netty/reactor-netty-core/1.0.48/reactor-netty-core-1.0.48.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "reactor-netty-http-1.0.48.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/io/projectreactor/netty/reactor-netty-http/1.0.48/reactor-netty-http-1.0.48.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "redis-authx-core-0.1.1-beta2.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/redis/clients/authentication/redis-authx-core/0.1.1-beta2/redis-authx-core-0.1.1-beta2.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "redis-authx-entraid-0.1.1-beta2.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/redis/clients/authentication/redis-authx-entraid/0.1.1-beta2/redis-authx-entraid-0.1.1-beta2.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "resilience4j-all-1.7.1.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/io/github/resilience4j/resilience4j-all/1.7.1/resilience4j-all-1.7.1.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "resilience4j-bulkhead-1.7.1.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/io/github/resilience4j/resilience4j-bulkhead/1.7.1/resilience4j-bulkhead-1.7.1.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "resilience4j-cache-1.7.1.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/io/github/resilience4j/resilience4j-cache/1.7.1/resilience4j-cache-1.7.1.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "resilience4j-circuitbreaker-1.7.1.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/io/github/resilience4j/resilience4j-circuitbreaker/1.7.1/resilience4j-circuitbreaker-1.7.1.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "resilience4j-core-1.7.1.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/io/github/resilience4j/resilience4j-core/1.7.1/resilience4j-core-1.7.1.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "resilience4j-ratelimiter-1.7.1.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/io/github/resilience4j/resilience4j-ratelimiter/1.7.1/resilience4j-ratelimiter-1.7.1.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "resilience4j-retry-1.7.1.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/io/github/resilience4j/resilience4j-retry/1.7.1/resilience4j-retry-1.7.1.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "resilience4j-timelimiter-1.7.1.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/io/github/resilience4j/resilience4j-timelimiter/1.7.1/resilience4j-timelimiter-1.7.1.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "slf4j-api-1.7.36.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "toxiproxy-java-2.1.7.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/eu/rekawek/toxiproxy/toxiproxy-java/2.1.7/toxiproxy-java-2.1.7.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "vavr-0.10.2.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/io/vavr/vavr/0.10.2/vavr-0.10.2.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "vavr-match-0.10.2.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/io/vavr/vavr-match/0.10.2/vavr-match-0.10.2.jar",
+    "library" : true,
+    "externalLibrary" : true
+  } ],
+  "sourceSets" : [ {
+    "sourceEncoding" : "UTF-8",
+    "name" : "target/main",
+    "sourceDirectories" : [ "/Users/bnaudts/git/test-oss/jedis/src/main/java", "/Users/bnaudts/git/test-oss/jedis/target/generated-sources/annotations" ],
+    "uri" : "file:/Users/bnaudts/git/test-oss/jedis/target/classes",
+    "dependencies" : [ "error_prone_annotations-2.38.0.jar", "resilience4j-core-1.7.1.jar", "commons-pool2-2.12.1.jar", "gson-2.13.1.jar", "resilience4j-circuitbreaker-1.7.1.jar", "json-20250517.jar", "vavr-0.10.2.jar", "resilience4j-retry-1.7.1.jar", "slf4j-api-1.7.36.jar", "redis-authx-core-0.1.1-beta2.jar", "resilience4j-all-1.7.1.jar", "vavr-match-0.10.2.jar" ]
+  }, {
+    "sourceEncoding" : "UTF-8",
+    "name" : "target/test-classes",
+    "sourceDirectories" : [ "/Users/bnaudts/git/test-oss/jedis/src/test/java", "/Users/bnaudts/git/test-oss/jedis/target/generated-test-sources/test-annotations" ],
+    "uri" : "file:/Users/bnaudts/git/test-oss/jedis/target/test-classes",
+    "test" : true,
+    "dependencies" : [ "java-jwt-4.5.0.jar", "resilience4j-bulkhead-1.7.1.jar", "toxiproxy-java-2.1.7.jar", "slf4j-api-1.7.36.jar", "resilience4j-cache-1.7.1.jar", "jna-5.13.0.jar", "junit-platform-commons-1.13.4.jar", "netty-buffer-4.1.118.Final.jar", "reactor-core-3.4.41.jar", "netty-transport-classes-kqueue-4.1.118.Final.jar", "logback-core-1.2.13.jar", "httpclient5-fluent-5.5.jar", "netty-tcnative-classes-2.0.70.Final.jar", "junit-jupiter-api-5.13.4.jar", "byte-buddy-1.12.19.jar", "netty-transport-native-unix-common-4.1.118.Final.jar", "jackson-datatype-jsr310-2.20.0.jar", "netty-handler-4.1.118.Final.jar", "reactor-netty-core-1.0.48.jar", "reactive-streams-1.0.4.jar", "netty-resolver-dns-native-macos-4.1.112.Final-osx-x86_64.jar", "vavr-0.10.2.jar", "hamcrest-3.0.jar", "json-unit-core-2.40.1.jar", "netty-transport-native-epoll-4.1.118.Final-linux-x86_64.jar", "nimbus-jose-jwt-10.0.1.jar", "cache-api-1.1.0.jar", "resilience4j-all-1.7.1.jar", "netty-codec-4.1.118.Final.jar", "junit-jupiter-params-5.13.4.jar", "content-type-2.3.jar", "redis-authx-entraid-0.1.1-beta2.jar", "jackson-core-2.20.0.jar", "json-smart-2.5.2.jar", "azure-json-1.5.0.jar", "netty-codec-dns-4.1.112.Final.jar", "resilience4j-circuitbreaker-1.7.1.jar", "json-20250517.jar", "reactor-netty-http-1.0.48.jar", "byte-buddy-agent-1.12.19.jar", "netty-transport-classes-epoll-4.1.118.Final.jar", "resilience4j-retry-1.7.1.jar", "netty-common-4.1.118.Final.jar", "error_prone_annotations-2.38.0.jar", "junit-jupiter-engine-5.13.4.jar", "junixsocket-native-common-2.10.1.jar", "apiguardian-api-1.1.2.jar", "resilience4j-timelimiter-1.7.1.jar", "json-unit-2.40.1.jar", "target/main", "netty-resolver-dns-classes-macos-4.1.112.Final.jar", "netty-codec-http2-4.1.118.Final.jar", "jackson-annotations-2.20.jar", "hamcrest-core-2.2.jar", "azure-identity-1.15.4.jar", "junit-platform-engine-1.13.4.jar", "objenesis-3.3.jar", "lang-tag-1.7.jar", "oauth2-oidc-sdk-11.23.jar", "netty-transport-4.1.118.Final.jar", "jackson-databind-2.20.0.jar", "netty-codec-http-4.1.118.Final.jar", "netty-tcnative-boringssl-static-2.0.70.Final-osx-x86_64.jar", "httpclient5-5.5.jar", "msal4j-1.19.1.jar", "azure-xml-1.2.0.jar", "msal4j-persistence-extension-1.3.0.jar", "mockito-junit-jupiter-4.11.0.jar", "azure-core-1.55.3.jar", "redis-authx-core-0.1.1-beta2.jar", "vavr-match-0.10.2.jar", "resilience4j-core-1.7.1.jar", "awaitility-4.3.0.jar", "netty-resolver-dns-4.1.112.Final.jar", "logback-classic-1.2.13.jar", "netty-tcnative-boringssl-static-2.0.70.Final-linux-x86_64.jar", "jts-core-1.20.0.jar", "netty-handler-proxy-4.1.118.Final.jar", "gson-2.13.1.jar", "netty-tcnative-boringssl-static-2.0.70.Final-linux-aarch_64.jar", "resilience4j-ratelimiter-1.7.1.jar", "netty-transport-native-kqueue-4.1.118.Final-osx-x86_64.jar", "httpcore5-5.3.4.jar", "asm-9.7.1.jar", "netty-codec-socks-4.1.118.Final.jar", "accessors-smart-2.5.2.jar", "commons-pool2-2.12.1.jar", "netty-tcnative-boringssl-static-2.0.70.Final-osx-aarch_64.jar", "httpcore5-h2-5.3.4.jar", "netty-tcnative-boringssl-static-2.0.70.Final.jar", "junixsocket-common-2.10.1.jar", "jcip-annotations-1.0-1.jar", "opentest4j-1.3.0.jar", "netty-resolver-4.1.118.Final.jar", "netty-tcnative-boringssl-static-2.0.70.Final-windows-x86_64.jar", "mockito-core-4.11.0.jar", "azure-core-http-netty-1.15.11.jar", "mockito-inline-4.11.0.jar", "jna-platform-5.13.0.jar" ]
+  } ],
+  "alternativeJREDirectory" : null
+}

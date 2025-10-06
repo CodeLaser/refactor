@@ -44,3 +44,9 @@ Ports are auto-allocated starting from 12340.
   -  mcp-proxy: 'https://github.com/sparfenyuk/mcp-proxy' 
   - `docker`
 - Java 24+ (for REST server)
+
+## Documentation
+
+See `DOCUMENTATION.md` for information about installation, and technical information related to configuring your projects.
+
+Watch videos at the [CodeLaser website](https://codelaser.io).

@@ -251,6 +251,10 @@ After saving the configuration and running `build-input-configuration`, you'll f
 
 The refactor server needs your source files to be managed by Git. It keeps track of a Git directory for each source set. These are normally discovered correctly with the `discover` command.
 
+### Example configurations
+
+In the `examples/` directory you find configurations of a selection of open source projects.
+
 ## Limitations of the Java Parser
 
 The Java parser has been tested on:

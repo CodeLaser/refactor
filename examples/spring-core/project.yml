@@ -1,0 +1,15 @@
+build:
+    directory: /Users/bnaudts/git/test-oss/spring-framework
+    extra_jmods: jdk.jfr
+    compile_debug_pattern: '.+Compiler arguments: (.+)'
+    clean_command: ./gradlew clean
+    git_dirs:
+        /Users/bnaudts/git/test-oss/spring-framework/.git:
+            baseRevision: ''
+            sourceSets:
+            - spring-jcl/main
+            - spring-core/main
+            - java/testFixtures
+            - java/test
+            branch: 77140da643c0351ea49c78990286e50020740f19
+    compile_debug_command: ./gradlew :spring-core:compileTestJava --debug --no-build-cache

@@ -1,0 +1,17 @@
+build:
+    directory: /Users/bnaudts/git/test-oss/jedis
+    compile_debug_command: mvn -Dmaven.build.cache.enabled=false compile test-compile
+        -X
+    clean_command: mvn clean
+    monitor: /Users/bnaudts/git/test-oss/jedis/pom.xml
+    compile_debug_pattern: \[DEBUG] (-d (.+))
+    git_dirs:
+        /Users/bnaudts/git/test-oss/jedis/.git:
+            baseRevision: ''
+            sourceSets:
+            - target/main
+            - target/test-classes
+            branch: master
+test:
+    run_tests_command: mvn test
+    compile_command: mvn compile test-compile

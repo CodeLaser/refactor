@@ -1,0 +1,24 @@
+build:
+    directory: /Users/bnaudts/git/test-oss/gson
+    compile_debug_command: mvn -Dmaven.build.cache.enabled=false compile test-compile
+        -X
+    clean_command: echo ok!
+    monitor:
+    - /Users/bnaudts/git/test-oss/gson/pom.xml
+    - /Users/bnaudts/git/test-oss/gson/metrics/pom.xml
+    - /Users/bnaudts/git/test-oss/gson/gson/pom.xml
+    - /Users/bnaudts/git/test-oss/gson/proto/pom.xml
+    - /Users/bnaudts/git/test-oss/gson/test-graal-native-image/pom.xml
+    - /Users/bnaudts/git/test-oss/gson/test-jpms/pom.xml
+    - /Users/bnaudts/git/test-oss/gson/test-shrinker/pom.xml
+    - /Users/bnaudts/git/test-oss/gson/extras/pom.xml
+    compile_debug_pattern: \[DEBUG] (-d (.+))
+    git_dirs:
+        /Users/bnaudts/git/test-oss/gson/.git:
+            branch: main
+            sourceSets:
+            - target/test-classes
+            baseRevision: ''
+test:
+    run_tests_command: mvn test
+    compile_command: mvn compile test-compile

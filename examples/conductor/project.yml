@@ -1,0 +1,112 @@
+build:
+    directory: /Users/bnaudts/git/test-oss/conductor
+    compile_debug_command: ./gradlew compileTestJava --debug --no-build-cache
+    clean_command: ./gradlew clean
+    monitor:
+    - /Users/bnaudts/git/test-oss/conductor/settings.gradle
+    - /Users/bnaudts/git/test-oss/conductor/build.gradle
+    - /Users/bnaudts/git/test-oss/conductor/azureblob-storage/build.gradle
+    - /Users/bnaudts/git/test-oss/conductor/metrics/build.gradle
+    - /Users/bnaudts/git/test-oss/conductor/task-status-listener/build.gradle
+    - /Users/bnaudts/git/test-oss/conductor/sqlite-persistence/build.gradle
+    - /Users/bnaudts/git/test-oss/conductor/kafka-event-queue/build.gradle
+    - /Users/bnaudts/git/test-oss/conductor/annotations-processor/build.gradle
+    - /Users/bnaudts/git/test-oss/conductor/json-jq-task/build.gradle
+    - /Users/bnaudts/git/test-oss/conductor/redis-lock/build.gradle
+    - /Users/bnaudts/git/test-oss/conductor/redis-persistence/build.gradle
+    - /Users/bnaudts/git/test-oss/conductor/postgres-persistence/build.gradle
+    - /Users/bnaudts/git/test-oss/conductor/core/build.gradle
+    - /Users/bnaudts/git/test-oss/conductor/awss3-storage/build.gradle
+    - /Users/bnaudts/git/test-oss/conductor/es7-persistence/build.gradle
+    - /Users/bnaudts/git/test-oss/conductor/grpc/build.gradle
+    - /Users/bnaudts/git/test-oss/conductor/postgres-external-storage/build.gradle
+    - /Users/bnaudts/git/test-oss/conductor/http-task/build.gradle
+    - /Users/bnaudts/git/test-oss/conductor/nats-streaming/build.gradle
+    - /Users/bnaudts/git/test-oss/conductor/grpc-client/build.gradle
+    - /Users/bnaudts/git/test-oss/conductor/awssqs-event-queue/build.gradle
+    - /Users/bnaudts/git/test-oss/conductor/amqp/build.gradle
+    - /Users/bnaudts/git/test-oss/conductor/server/build.gradle
+    - /Users/bnaudts/git/test-oss/conductor/annotations/build.gradle
+    - /Users/bnaudts/git/test-oss/conductor/common/build.gradle
+    - /Users/bnaudts/git/test-oss/conductor/nats/build.gradle
+    - /Users/bnaudts/git/test-oss/conductor/common-persistence/build.gradle
+    - /Users/bnaudts/git/test-oss/conductor/es6-persistence/build.gradle
+    - /Users/bnaudts/git/test-oss/conductor/kafka/build.gradle
+    - /Users/bnaudts/git/test-oss/conductor/workflow-event-listener/build.gradle
+    - /Users/bnaudts/git/test-oss/conductor/grpc-server/build.gradle
+    - /Users/bnaudts/git/test-oss/conductor/test-harness/build.gradle
+    - /Users/bnaudts/git/test-oss/conductor/test-util/build.gradle
+    - /Users/bnaudts/git/test-oss/conductor/mysql-persistence/build.gradle
+    - /Users/bnaudts/git/test-oss/conductor/os-persistence/build.gradle
+    - /Users/bnaudts/git/test-oss/conductor/redis-concurrency-limit/build.gradle
+    - /Users/bnaudts/git/test-oss/conductor/rest/build.gradle
+    - /Users/bnaudts/git/test-oss/conductor/cassandra-persistence/build.gradle
+    - /Users/bnaudts/git/test-oss/conductor/server-lite/build.gradle
+    compile_debug_pattern: '.+Compiler arguments: (.+)'
+    git_dirs:
+        /Users/bnaudts/git/test-oss/conductor/.git:
+            baseRevision: ''
+            sourceSets:
+            - annotations/main
+            - common/main
+            - metrics/main
+            - core/main
+            - amqp/main
+            - amqp/test
+            - annotations-processor/main
+            - annotations-processor/test
+            - awss3-storage/main
+            - awssqs-event-queue/main
+            - common/test
+            - awssqs-event-queue/test
+            - azureblob-storage/main
+            - azureblob-storage/test
+            - cassandra-persistence/main
+            - core/test
+            - common-persistence/test
+            - es7-persistence/main
+            - grpc/main
+            - grpc-client/main
+            - grpc-server/main
+            - redis-persistence/main
+            - rest/main
+            - http-task/main
+            - json-jq-task/main
+            - kafka/main
+            - kafka-event-queue/main
+            - mysql-persistence/main
+            - nats/main
+            - nats-streaming/main
+            - postgres-external-storage/main
+            - postgres-persistence/main
+            - redis-concurrency-limit/main
+            - redis-lock/main
+            - sqlite-persistence/main
+            - task-status-listener/main
+            - workflow-event-listener/main
+            - server/main
+            - test-util/test
+            - es7-persistence/test
+            - grpc/test
+            - grpc-client/test
+            - grpc-server/test
+            - http-task/test
+            - json-jq-task/test
+            - kafka/test
+            - kafka-event-queue/test
+            - mysql-persistence/test
+            - os-persistence/main
+            - os-persistence/test
+            - postgres-external-storage/test
+            - postgres-persistence/test
+            - redis-lock/test
+            - redis-persistence/test
+            - rest/test
+            - server-lite/main
+            - sqlite-persistence/test
+            - test-harness/test
+            - workflow-event-listener/test
+            branch: main
+test:
+    run_tests_command: ./gradlew test
+    compile_command: ./gradlew compileTestJava

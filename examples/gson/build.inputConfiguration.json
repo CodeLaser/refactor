@@ -1,0 +1,197 @@
+{
+  "workingDirectory" : ".",
+  "classPathParts" : [ {
+    "name" : "java.sql",
+    "uri" : "jmod:java.sql",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.rmi",
+    "uri" : "jmod:java.rmi",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.xml.crypto",
+    "uri" : "jmod:java.xml.crypto",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.logging",
+    "uri" : "jmod:java.logging",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.transaction.xa",
+    "uri" : "jmod:java.transaction.xa",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.sql.rowset",
+    "uri" : "jmod:java.sql.rowset",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.xml",
+    "uri" : "jmod:java.xml",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.management",
+    "uri" : "jmod:java.management",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.datatransfer",
+    "uri" : "jmod:java.datatransfer",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.instrument",
+    "uri" : "jmod:java.instrument",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.security.jgss",
+    "uri" : "jmod:java.security.jgss",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.desktop",
+    "uri" : "jmod:java.desktop",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.naming",
+    "uri" : "jmod:java.naming",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.compiler",
+    "uri" : "jmod:java.compiler",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.scripting",
+    "uri" : "jmod:java.scripting",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.prefs",
+    "uri" : "jmod:java.prefs",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.net.http",
+    "uri" : "jmod:java.net.http",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.security.sasl",
+    "uri" : "jmod:java.security.sasl",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.management.rmi",
+    "uri" : "jmod:java.management.rmi",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "java.base",
+    "uri" : "jmod:java.base",
+    "library" : true,
+    "externalLibrary" : true,
+    "partOfJdk" : true
+  }, {
+    "name" : "/Users/bnaudts/git/test-oss/gson/gson/target/classes",
+    "uri" : "file:/Users/bnaudts/git/test-oss/gson/gson/target/classes",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "/Users/bnaudts/git/test-oss/gson/proto/target/classes",
+    "uri" : "file:/Users/bnaudts/git/test-oss/gson/proto/target/classes",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "asm-9.7.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/org/ow2/asm/asm/9.7/asm-9.7.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "auto-value-annotations-1.11.0.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/com/google/auto/value/auto-value-annotations/1.11.0/auto-value-annotations-1.11.0.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "error_prone_annotations-2.41.0.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/com/google/errorprone/error_prone_annotations/2.41.0/error_prone_annotations-2.41.0.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "failureaccess-1.0.3.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/com/google/guava/failureaccess/1.0.3/failureaccess-1.0.3.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "guava-33.4.8-jre.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/com/google/guava/guava/33.4.8-jre/guava-33.4.8-jre.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "j2objc-annotations-3.0.0.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "jspecify-1.0.0.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "junit-4.13.2.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "protobuf-java-4.32.0.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/com/google/protobuf/protobuf-java/4.32.0/protobuf-java-4.32.0.jar",
+    "library" : true,
+    "externalLibrary" : true
+  }, {
+    "name" : "truth-1.4.4.jar",
+    "uri" : "file:/Users/bnaudts/.m2/repository/com/google/truth/truth/1.4.4/truth-1.4.4.jar",
+    "library" : true,
+    "externalLibrary" : true
+  } ],
+  "sourceSets" : [ {
+    "name" : "target/test-classes",
+    "sourceDirectories" : [ "/Users/bnaudts/git/test-oss/gson/proto/src/test/java", "/Users/bnaudts/git/test-oss/gson/proto/target/generated-test-sources/protobuf/java", "/Users/bnaudts/git/test-oss/gson/proto/target/generated-test-sources/test-annotations" ],
+    "uri" : "file:/Users/bnaudts/git/test-oss/gson/proto/target/test-classes",
+    "test" : true,
+    "dependencies" : [ "asm-9.7.jar", "junit-4.13.2.jar", "auto-value-annotations-1.11.0.jar", "error_prone_annotations-2.41.0.jar", "listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar", "j2objc-annotations-3.0.0.jar", "guava-33.4.8-jre.jar", "truth-1.4.4.jar", "protobuf-java-4.32.0.jar", "failureaccess-1.0.3.jar", "jspecify-1.0.0.jar", "/Users/bnaudts/git/test-oss/gson/proto/target/classes", "/Users/bnaudts/git/test-oss/gson/gson/target/classes" ]
+  } ],
+  "alternativeJREDirectory" : null
+}
