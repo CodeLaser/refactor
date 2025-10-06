@@ -336,3 +336,31 @@ docker rm refactor-mcp 2>/dev/null || true
 echo "🛑 refactor MCP server stopped"
 EOF
 chmod +x $stop_file
+
+echo "\n\nIMPORTANT"
+echo "Ensure that your LLM client knows about the MCP server."
+echo "Typically it needs to know the url: http://127.0.0.1:$mcp_port/mcp, and the location of the mcp-proxy binary."
+echo "For the Claude Desktop app, the MCP server definition should look like: "
+cat << EOF
+{
+  "globalShortcut": "",
+  "mcpServers": {
+    "desktop-commander": {
+      "command": "npx",
+      "args": [
+        "@wonderwhy-er/desktop-commander@latest"
+      ]
+    },
+    "codelaser-refactor": {
+      "command": "/Users/pvremort/.local/bin/mcp-proxy",
+      "args": [
+        "--transport=streamablehttp",
+        "http://127.0.0.1:$mcp_port/mcp"
+      ]
+    }
+  }
+}
+EOF
+echo "Add the MCP server to Claude Code with a statement similar to:"
+echo "  claude mcp add codelaser-refactor -- /absolute/path/to/your/home/.local/bin/mcp-proxy --transport=streamablehttp http://127.0.0.1:$mcp_port/mcp"
+

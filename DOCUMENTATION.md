@@ -55,7 +55,7 @@ Either can be stopped or started independently of each other—there is no requi
 
 ## Connecting LLM Applications to the MCP Server
 
-Note the port number used by the MCP server. In the following examples, it is 8080.
+Note the (external) port number used by the MCP server. In the following examples, it is 12341.
 
 ### Claude Desktop
 
@@ -75,7 +75,7 @@ Edit the file that contains MCP server definitions. The result should look like:
       "command": "/Users/pvremort/.local/bin/mcp-proxy",
       "args": [
         "--transport=streamablehttp",
-        "http://127.0.0.1:8080/mcp"
+        "http://127.0.0.1:12341/mcp"
       ]
     }
   }
@@ -95,7 +95,7 @@ claude mcp add-from-claude-desktop
 Otherwise, edit and run the following command:
 
 ```bash
-claude mcp add codelaser-refactor -- /absolute/path/to/your/home/.local/bin/mcp-proxy --transport=streamablehttp http://127.0.0.1:8080/mcp
+claude mcp add codelaser-refactor -- /absolute/path/to/your/home/.local/bin/mcp-proxy --transport=streamablehttp http://127.0.0.1:12341/mcp
 ```
 
 Ensure that `mcp-proxy` can be found and that the port number is correct.
