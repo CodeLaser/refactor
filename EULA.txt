@@ -1,0 +1,73 @@
+# END USER LICENSE AGREEMENT (EULA)
+
+**BETA SOFTWARE - NO WARRANTY**
+
+Last Updated: October 6, 2025.
+
+## IMPORTANT NOTICE
+
+THIS IS BETA SOFTWARE. BY INSTALLING, COPYING, OR USING THIS SOFTWARE, YOU AGREE TO BE BOUND BY THE TERMS OF THIS AGREEMENT. IF YOU DO NOT AGREE, DO NOT INSTALL OR USE THE SOFTWARE.
+
+## 1. GRANT OF LICENSE
+
+Subject to the terms of this Agreement, CodeLaser BV ("Licensor") grants you a non-exclusive, non-transferable, revocable license to use "CodeLaser Refactor MCP server for Java (Free version)" ("Software") for evaluation and testing purposes only.
+
+## 2. BETA SOFTWARE ACKNOWLEDGMENT
+
+You acknowledge and agree that:
+- This Software is a pre-release beta version
+- The Software may contain bugs, errors, and defects
+- The Software is not suitable for production or commercial use
+- Features may change or be removed without notice
+- Licensor may discontinue the Software at any time
+
+## 3. NO WARRANTY
+
+**THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. LICENSOR DOES NOT WARRANT THAT THE SOFTWARE WILL BE ERROR-FREE, UNINTERRUPTED, OR MEET YOUR REQUIREMENTS.**
+
+## 4. LIMITATION OF LIABILITY
+
+**TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL LICENSOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF DATA, LOSS OF PROFITS, OR BUSINESS INTERRUPTION, ARISING OUT OF THE USE OR INABILITY TO USE THE SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.**
+
+## 5. DATA AND BACKUPS
+
+You are solely responsible for:
+- Backing up your data before using the Software
+- Any data loss or corruption that may occur
+- Ensuring compatibility with your systems
+
+## 6. SOURCE CODE HANDLING
+
+The Software may require access to your source code in order to operate. You acknowledge and agree that:
+
+- The Software processes your source code locally on your device
+- No source code is transmitted, collected, or stored by the Licensor
+- Licensor has no access to, and makes no claim of ownership over, your source code
+- Your source code remains your sole property and under your exclusive control at all times.
+
+## 7. NO SUPPORT OBLIGATION
+
+Licensor is under no obligation to provide technical support, maintenance, updates, or bug fixes for the beta Software.
+
+## 8. RESTRICTIONS
+
+You may not:
+- Distribute, sell, lease, or sublicense the Software
+- Reverse engineer, decompile, or disassemble the Software (except where prohibited by law)
+- Remove or alter any proprietary notices on the Software
+
+## 9. TERMINATION
+
+This license is effective until terminated. Your rights will terminate automatically without notice if you fail to comply with any term of this Agreement. Upon termination, you must destroy all copies of the Software.
+
+## 10. GOVERNING LAW
+
+This Agreement shall be governed by the laws of Belgium, without regard to its conflict of law provisions.
+
+## 11. ENTIRE AGREEMENT
+
+This Agreement constitutes the entire agreement between you and Licensor regarding the Software and supersedes all prior agreements.
+
+---
+
+**BY INSTALLING OR USING THE SOFTWARE, YOU ACKNOWLEDGE THAT YOU HAVE READ THIS AGREEMENT, UNDERSTAND IT, AND AGREE TO BE BOUND BY ITS TERMS.**

@@ -2,6 +2,11 @@
 
 This document describes technical aspects of CodeLaser's refactor server related to installation, configuration, and preparing your project for use by the server.
 
+## Download
+
+The installation starting point is the [CodeLaser/refactor](https://github.com/CodeLaser/refactor) GitHub project.
+You may have received a clone of this project in the form of a zip file.
+
 ## Contact
 
 Please email us at [support@codelaser.io](mailto:support@codelaser.io) for any questions.
@@ -20,6 +25,7 @@ Note that most testing has been done on macOS. The system should run fine on Lin
 1. Clone the public project: [https://github.com/CodeLaser/refactor](https://github.com/CodeLaser/refactor)
 2. Navigate to the `refactor` directory
 3. Run the installation script, which will guide you through:
+   - Accepting the EULA (End User License Agreement)
    - Choosing 4 free ports from a range that you can set yourself
    - Obtaining the latest JAR for the REST server
    - Loading the latest Docker image for the MCP server and UI server
@@ -123,6 +129,7 @@ These are stored in a directory with the name of the symbolic link in `./project
 The `./logs` directory contains:
 - Main log file: `application.log`
 - Separate log file detailing all activity related to activating and validating the license key
+- Separate log file to avoid accepting the license agreement multiple times
 
 ### Config Directory
 

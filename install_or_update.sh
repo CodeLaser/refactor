@@ -1,7 +1,88 @@
+#!/bin/bash
+
+EULA_FILE="EULA.txt"
+echo "Start installation of Refactor server"
+
+# Function to display EULA
+display_eula() {
+    clear
+    echo "========================================"
+    echo "  END USER LICENSE AGREEMENT"
+    echo "  BETA SOFTWARE - NO WARRANTY"
+    echo "========================================"
+    echo ""
+    
+    # Check if EULA file exists
+    if [ ! -f "$EULA_FILE" ]; then
+        echo "ERROR: EULA file not found at $EULA_FILE"
+        exit 1
+    fi
+    
+    # Display EULA with pagination
+    if command -v cat >/dev/null 2>&1; then
+        cat "$EULA_FILE"
+    elif command -v more >/dev/null 2>&1; then
+        more "$EULA_FILE"
+    else
+        cat "$EULA_FILE"
+        echo ""
+        echo "Press Enter to continue..."
+        read
+    fi
+}
+
+# Function to get user acknowledgment
+get_acknowledgment() {
+    echo ""
+    echo "========================================"
+    echo "IMPORTANT: Please read the above EULA carefully."
+    echo ""
+    echo "This is BETA software provided WITHOUT WARRANTY."
+    echo "By accepting, you acknowledge:"
+    echo "  - This software may contain bugs and errors"
+    echo "  - No warranty or support is provided"
+    echo "  - You use this software at your own risk"
+    echo "========================================"
+    echo ""
+    
+    while true; do
+        read -p "Do you accept the terms of the EULA? (yes/no): " response
+        
+        case "$response" in
+            [Yy][Ee][Ss]|[Yy])
+                echo ""
+                echo "EULA accepted. Proceeding with installation..."
+                return 0
+                ;;
+            [Nn][Oo]|[Nn])
+                echo ""
+                echo "EULA not accepted. Installation cancelled."
+                exit 1
+                ;;
+            *)
+                echo "Please answer 'yes' or 'no'."
+                ;;
+        esac
+    done
+}
+
+# Display EULA and get acknowledgment
+mkdir -p logs
+INSTALL_LOG="logs/install.log"
+
+# Check if EULA was already accepted
+if [ -f "$INSTALL_LOG" ] && grep -q "EULA accepted by user" "$INSTALL_LOG"; then
+    echo "EULA previously accepted on: $(grep "EULA accepted by user" "$INSTALL_LOG" | tail -1 | cut -d: -f1-5)"
+    echo "Skipping EULA display..."
+else
+    # Display EULA and get acknowledgment
+    display_eula
+    get_acknowledgment
+    echo "$(date): EULA accepted by user" >> $INSTALL_LOG
+fi
 
 
 ##### write or update config/refactor-ports.txt #####
-
 
 source find-ports.sh
 

@@ -50,3 +50,8 @@ Ports are auto-allocated starting from 12340.
 See `DOCUMENTATION.md` for information about installation, and technical information related to configuring your projects.
 
 Watch videos at the [CodeLaser website](https://codelaser.io).
+
+## End User License agreement
+
+See `EULA.txt`.
+You must agree to this End User License Agreement to use the refactor server software.
