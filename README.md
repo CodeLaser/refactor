@@ -1,11 +1,19 @@
 CodeLaser Refactor
 ==================
 
+## Requirements
+
+- `jq`
+- for the mcp servers and UI:
+  -  `mcp-proxy`: 'https://github.com/sparfenyuk/mcp-proxy'
+  - `docker`
+- Java 24+ (for REST server)
+
 ## Quick Install
 
+First, run the install_or_update script:
+
 ```bash
-git clone git@github.com:CodeLaser/refactor.git
-cd refactor
 ./install_or_update.sh
 ```
 
@@ -13,17 +21,25 @@ This downloads and configures:
 - Java REST server (JAR)
 - MCP server + React UI (Docker)
 
+The script also prints important details on how to connect your LLM client to the MCP server.
+
 ## Usage
 
+Either start everything through one script:
 ```bash
-# Start everything
 ./start-all.sh
+```
 
-# Start individual components  
-./start-java.sh     # Java REST server only
-./start-docker.sh   # Docker container only
+Or start individual components:
+```bash
+./start-mcp.sh   # Docker container only
+./start-java.sh  # Java REST server only
+```
+The ```start-java.sh``` script will provide you with a prompt with further instructions for setting up a project.
+Setting up a project is required before you can start using CodeLaser tools within your LLM.
 
-# Stop everything
+Stop everything
+```bash
 ./stop-all.sh
 ```
 
@@ -35,15 +51,7 @@ After installation:
 - React UI: `http://localhost:PORT+2`
 - Configure server: `http://localhost:PORT+3/mcp-configure`
 
-Ports are auto-allocated starting from 12340.
-
-## Requirements
-
-- `jq`
-- for the mcp servers and UI:
-  -  mcp-proxy: 'https://github.com/sparfenyuk/mcp-proxy' 
-  - `docker`
-- Java 24+ (for REST server)
+Ports are auto-allocated starting from 10000.
 
 ## Documentation
 
