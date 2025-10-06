@@ -22,7 +22,7 @@ I had to add
     <scope>test</scope>
 </dependency>
 ```
-to tho 'pom.xml`'s dependency section to compile the project.
+to tho 'pom.xml`'s dependency section to be able to compile the project.
 Note: cannot compile with the Java 24+ needed to start the Refactor server, so point `JAVA_HOME` to a lower version JDK.
 
 ## JEDIS: example Maven project

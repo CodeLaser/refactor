@@ -2,6 +2,10 @@
 
 This document describes technical aspects of CodeLaser's refactor server related to installation, configuration, and preparing your project for use by the server.
 
+## Contact
+
+Please email us at [support@codelaser.io](mailto:support@codelaser.io) for any questions.
+
 ## Prerequisites
 
 - **Java 24 or higher** to run the REST server
@@ -133,6 +137,8 @@ The command line has three modes: **main**, **configure**, and **select**.
 The starting mode. Available commands:
 
 - `activate-license-key` — Activate the license key
+- `add-project` — Add a project. This command simple adds a symbolic link in `./projects`
+- `remove-project` — Remove a project. This command simply removes a symbolic link from `./projects`, and optionally removes the `work/<projectName>` directory.
 - `list` — Show the current projects linked in `./projects`
 - `exit` — Exit the command line **and stop the server**
 - `configure <project>` — Move to configuration mode
@@ -152,6 +158,7 @@ The default configuration procedure consists of two steps:
 Additional commands:
 
 - `set` — Individually set the value of any property
+- `show` — Shows the values of the properties
 - `run-analyzer` — Test-run the analyzer
 
 ### Select Mode
@@ -272,7 +279,22 @@ Note that part of the refactor server parser is open-source: it is the latest it
 
 ## License Manager
 
-Without a valid license, the refactor server falls back to a default restriction on the number of types that can be loaded for many refactor queries and operations.
+Without a valid license, the refactor server falls back to a default restriction on the number of primary types (Java classes) that can be loaded for many refactor queries and operations. Currently, the restrictions are:
+
+- no license: 100 types
+- demo/free license: 1,000 types
+- paid license: no limit.
+
+The successful activation of a license (using the 'activate-license-key' command) generates 3 files in the refactor server directory:
+
+- `license-info.yml`: information about the license (expiry date, description, order and product IDs).
+- `license-key.enc`: the license key, encrypted. This file is used to periodically validate the license.
+- `license-offline.enc`: a cache for a validated license. This allows you to continue using the refactor server when you are offline.
+
+The activation and occasional validation of the licenses are done via a REST call to the 'https://codelaser.io/' domain. Please ensure that your network allows this.
+
+Please contact us at 'support@codelaser.io' for any issues related to licenses. If available, append the `license-info.yml` file.
+
 
 ## Docstrings
 
