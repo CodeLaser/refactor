@@ -3,11 +3,11 @@ CodeLaser Refactor
 
 ## Requirements
 
-- `jq`
+- `jq` for the installation script
 - for the mcp servers and UI:
   -  `mcp-proxy`: 'https://github.com/sparfenyuk/mcp-proxy'
   - `docker`
-- Java 24+ (for REST server)
+- Java 24+ for the REST server
 
 ## Quick Install
 
@@ -38,10 +38,12 @@ Or start individual components:
 The ```start-java.sh``` script will provide you with a prompt with further instructions for setting up a project.
 Setting up a project is required before you can start using CodeLaser tools within your LLM.
 
-Stop everything
+Stop the MCP server/Docker container:
 ```bash
-./stop-all.sh
+./stop-mcp.sh
 ```
+
+The REST server can be stopped by entering the `exit` command in its command line.
 
 ## Endpoints
 
