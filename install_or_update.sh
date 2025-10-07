@@ -198,8 +198,8 @@ fi
 
 ##### get the latest release #####
 
-source get-prerelease.sh
-version_output=$(get_prerelease | tail -n 1)
+source get-release.sh
+version_output=$(get_release | tail -n 1)
 jar_version=$(echo "$version_output" | cut -d' ' -f1)
 docker_version=$(echo "$version_output" | cut -d' ' -f2)
 
