@@ -47,9 +47,9 @@ Ports are auto-allocated starting from 12340.
 
 ## Documentation
 
-See `DOCUMENTATION.md` for information about installation, and technical information related to configuring your projects.
-
-Watch videos at the [CodeLaser website](https://codelaser.io).
+- `INSTALLATION.md` provides information about installation, and technical information related to configuring your projects.
+- `USER_GUIDE.md` shows how you can refactor your project with the MCP server and its companion UI.
+- Watch videos at the [CodeLaser's Youtube channel](https://www.youtube.com/@codelaser-refactoring).
 
 ## End User License agreement
 
