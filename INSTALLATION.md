@@ -22,24 +22,24 @@ Note that most testing has been done on macOS. The system should run fine on Lin
 
 ## Installation
 
-1. Clone the public project: [https://github.com/CodeLaser/refactor](https://github.com/CodeLaser/refactor)
-2. Navigate to the `refactor` directory
-3. Run the installation script, which will guide you through:
-   - Accepting the EULA (End User License Agreement)
-   - Choosing 4 free ports from a range that you can set yourself
-   - Obtaining the latest JAR for the REST server
-   - Loading the latest Docker image for the MCP server and UI server
-   - Writing out configuration files in the `./config` directory
-   - Writing out start and stop scripts in the current directory
-   - Ensuring the existence of `./projects`, `./logs`, and `./work` directories
+NOTE: This directory can also be found at [https://github.com/CodeLaser/refactor](https://github.com/CodeLaser/refactor).
 
-Feel free to re-run this script—it will not overwrite any changes you make to the configuration, work, or project directories.
+Run the installation script, which will guide you through:
+ - Accepting the EULA (End User License Agreement)
+ - Choosing 4 free ports from a range that you can set yourself
+ - Obtaining the latest JAR for the REST server
+ - Loading the latest Docker image for the MCP server and UI server
+ - Writing out configuration files in the `./config` directory
+ - Writing out start and stop scripts in the current directory
+ - Ensuring the existence of `./projects`, `./logs`, and `./work` directories
 
-Use the `install-or-update.sh` script to check for new updates.
+Feel free to re-run this script to check for updates—it will not overwrite any changes you make to the configuration, work, or project directories.
 
 ## Starting and Stopping the Servers
 
-The `startAll.sh` script starts both the Docker servers and the Java server using the individual scripts `start-java.sh` and `start-mcp.sh`.
+### Starting the Servers
+
+The `start-all.sh` script starts both the Docker servers and the Java server using the individual scripts `start-java.sh` and `start-mcp.sh`.
 
 Either can be stopped or started independently of each other—there is no required order.
 
